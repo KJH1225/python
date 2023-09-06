@@ -444,20 +444,48 @@
 # print(not 1225 in list_a) #False 
 
 
-###range(시작값, 종료값, 증가값)
-##시작값: 생략가능(기본0), 포함
-##종료값: 생략불가, 포함됨
-##증감값: 생략 가능(기본1)
+# ###range(시작값, 종료값, 증가값)
+# ##시작값: 생략가능(기본0), 포함
+# ##종료값: 생략불가, 포함됨
+# ##증감값: 생략 가능(기본1)
+# a = range(10)  
+# print(list(a))#[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+# print(list(range(15))) #[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+# print(list(range(10, 20)))#[10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+# print(list(range(0, 50, 2)))#[0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48]
+# print(list(range(10, 0, -2)))#[10, 8, 6, 4, 2]
+# for i in range(10):
+#   print(i) #0~9를 한번씩 출력(줄바꿈됨)
+# for i in range(2, 10, 2):
+#   print(i, end=", ") #2, 4, 6, 8,
+# for i in list(range(2, 10, 2)):
+#   print(i, end=", ") #2, 4, 6, 8,
 
-a = range(10)  
-print(list(a))#[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-print(list(range(15))) #[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
-print(list(range(10, 20)))#[10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
-print(list(range(0, 50, 2)))#[0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48]
-print(list(range(10, 0, -2)))#[10, 8, 6, 4, 2]
-for i in range(10):
-  print(i) #0~9를 한번씩 출력(줄바꿈됨)
-for i in range(2, 10, 2):
-  print(i, end=", ") #2, 4, 6, 8,
-for i in list(range(2, 10, 2)):
-  print(i, end=", ") #2, 4, 6, 8,
+#딕셔너리(객체 같은 느낌)
+adict = {"name":"김지환", "type":"프론트엔드"}
+print(adict["name"], adict["type"]) #김지환 프론트엔드
+
+bdict = {
+  "director": ["안소니", "조루소"],
+  "ㅁㄴㅇㄹ": ["헐크", "아이언맨 "]
+}
+bdict["ㅁㄴㅇㄹ"][0] = "김지환" 
+print(bdict["ㅁㄴㅇㄹ"]) #['김지환', '아이언맨 ']
+
+name = "이름"
+dict_key = {
+  name: "7D 망고", #name에 위에서 선언한 "이름이 들어감"
+  type: "당절임" #이러면 type()함수 호출됨 부적절
+}
+print(dict_key) #{'이름': '7D 망고', <class 'type'>: '당절임'}
+print(dict_key[type]) #당절임
+dict_key['price'] = 12000 #없는거면 추가됨
+print(dict_key) #{'이름': '7D 망고', <class 'type'>: '당절임', 'price': 12000}
+del dict_key['price']
+print(dict_key)
+
+key = input("key입력: ")
+if key in dict_key:
+  print(dict_key[key])
+else:
+  print("해당 키({})는 없음".format(key))
