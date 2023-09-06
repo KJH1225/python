@@ -360,11 +360,87 @@
 # print(alist)
 # print(blist)
 
-alist = [1,2,3,4,5,6,7]
-print(alist[1:4]) #[2, 3, 4]
-print(alist[4:]) #[5, 6, 7]
+# #리스트 자르기?
+# alist = [1,2,3,4,5,6,7]
+# print(alist[1:4]) #[2, 3, 4]
+# print(alist[4:]) #[5, 6, 7]
+
+# #리스트 중간 값 변경
+# list_a = [1,2,3,4,5]
+# print(list_a)
+# list_a[0] = ["변경", "리스트 삽입"]
+# print(list_a)
+
+# #리스트 접근제어자 2중
+# list_a = [1,2,"문자열",4,5]
+# print(list_a[2]) #문자열
+# print(list_a[2][1]) #자
+# list_b =[[1,2,3],[4,5,6],[7,8,9]]
+# print(list_b) #[[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+# print(list_b[1]) #[4, 5, 6]
+# print(list_b[1][1]) #5
+
+# #문자열의 더하기, 곱하기, 길이
+# a = [1,2,3]
+# b = [4,5,6]
+# print("a+b: ", a+b) #a+b:  [1, 2, 3, 4, 5, 6]
+# print("a+b: ", a*3) #a+b:  [1, 2, 3, 1, 2, 3, 1, 2, 3]
+# print(len(a)) #3
+
+# list_a = [1,2,3]
+# list_a.append(4) #뒤에 추가 
+# list_a.append(5) #뒤에 추가
+# print(list_a) #[1, 2, 3, 4, 5]
+# list_a.insert(0, 10) #특정 위치에 추가
+# print(list_a) # [10, 1, 2, 3, 4, 5]
+# list_b=["a","b","c"]
+# list_b.append([1,2,3]) #배열 통째로 넣음
+# list_c=["a","b","c"]
+# list_c.extend([1,2,3]) #배열 풀어서 넣음
+# print(list_b) #['a', 'b', 'c', [1, 2, 3]]
+# print(list_c) #['a', 'b', 'c', 1, 2, 3]
 
 
+# #배열 특장값 지우기
+# list_a = [1,2,3,4,5]
+# del list_a[1] # 1번 인덱스 지우기
+# print(list_a) #[1, 3, 4, 5]
+# list_a.pop(2) # 두번째 인덱스를 뺌
+# print(list_a) #[1, 3, 5]
+# list_a.pop() #스택의 pop개념 가장 마지막거를 뺌
+# print(list_a) #[1, 3]
 
+# #배열 범위로 지움
+# list_b = [1,2,3,4,5]
+# del list_b[2:4] #인덱스 2,3,4 지움
+# print(list_b) #[1, 2, 5]
+# list_c = [0,1,2,3,4,5,6]
+# del list_c[:3] # 처음부터 3번째 인덱스 전까지 지움
+# print(list_c) #[3, 4, 5, 6]
 
+# #값으로 제거
+# list_a=[1,2,2,3,3,3,4,4,4,4,5,5,5,5,5]
+# list_a.remove(3) #처음 3제거 다 지우려면 반복문
+# print(list_a)
 
+# #배열 클리어
+# list_a = [1,2,3,4,5]
+# list_a.clear()
+# print(list_a) #[]
+
+# #리스트 정렬하기 sort()
+# list_a = [2,4,1,5,3]
+# list_a.sort() #오름차순
+# print(list_a) #[1, 2, 3, 4, 5]
+# list_a.sort(reverse=True) #내림차순
+# print(list_a) #[5, 4, 3, 2, 1]
+
+# #리스트 내부에 특정 값 있는지 없는지 확인 in, not in
+# list_a = [1,2,3,4,5,1225]
+# print(1225 in list_a) #True
+# print(111111111111111 in list_a) #False
+# print(1225 not in list_a) #False
+# print(111111111111111 not in list_a) #True
+# print(not 1225 in list_a) #False 
+
+ㅇㄹ
