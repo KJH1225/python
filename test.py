@@ -461,31 +461,134 @@
 # for i in list(range(2, 10, 2)):
 #   print(i, end=", ") #2, 4, 6, 8,
 
-#딕셔너리(객체 같은 느낌)
-adict = {"name":"김지환", "type":"프론트엔드"}
-print(adict["name"], adict["type"]) #김지환 프론트엔드
+# #딕셔너리(객체 같은 느낌)
+# adict = {"name":"김지환", "type":"프론트엔드"}
+# print(adict["name"], adict["type"]) #김지환 프론트엔드
 
-bdict = {
-  "director": ["안소니", "조루소"],
-  "ㅁㄴㅇㄹ": ["헐크", "아이언맨 "]
-}
-bdict["ㅁㄴㅇㄹ"][0] = "김지환" 
-print(bdict["ㅁㄴㅇㄹ"]) #['김지환', '아이언맨 ']
+# bdict = {
+#   "director": ["안소니", "조루소"],
+#   "ㅁㄴㅇㄹ": ["헐크", "아이언맨 "]
+# }
+# bdict["ㅁㄴㅇㄹ"][0] = "김지환" 
+# print(bdict["ㅁㄴㅇㄹ"]) #['김지환', '아이언맨 ']
 
-name = "이름"
-dict_key = {
-  name: "7D 망고", #name에 위에서 선언한 "이름이 들어감"
-  type: "당절임" #이러면 type()함수 호출됨 부적절
-}
-print(dict_key) #{'이름': '7D 망고', <class 'type'>: '당절임'}
-print(dict_key[type]) #당절임
-dict_key['price'] = 12000 #없는거면 추가됨
-print(dict_key) #{'이름': '7D 망고', <class 'type'>: '당절임', 'price': 12000}
-del dict_key['price']
-print(dict_key)
+# name = "이름"
+# dict_key = {
+#   name: "7D 망고", #name에 위에서 선언한 "이름이 들어감"
+#   type: "당절임" #이러면 type()함수 호출됨 부적절
+# }
+# print(dict_key) #{'이름': '7D 망고', <class 'type'>: '당절임'}
+# print(dict_key[type]) #당절임
+# dict_key['price'] = 12000 #없는거면 추가됨
+# print(dict_key) #{'이름': '7D 망고', <class 'type'>: '당절임', 'price': 12000}
+# del dict_key['price']
+# print(dict_key)
 
-key = input("key입력: ")
-if key in dict_key:
-  print(dict_key[key])
-else:
-  print("해당 키({})는 없음".format(key))
+# key = input("key입력: ")
+# if key in dict_key:
+#   print(dict_key[key])
+# else:
+#   print("해당 키({})는 없음".format(key))
+
+# arr = [1,2,3,4,5]
+# for i in range(len(arr)):
+#   print("{}번째 반복: {}".format(i, arr[i]))
+
+
+# #reversed() 함수
+# a=range(5)
+# print("a:", list(a)) #a: [0, 1, 2, 3, 4]
+# b=reversed(a)
+# print("b:", list(b)) #b: [4, 3, 2, 1, 0]
+
+# for i in reversed(a):
+#   print(i) # 43210
+
+
+#while반복문
+# i=0
+# while True:
+#   if i >= 1000:
+#     break
+#   if i%2 == 0:
+#     i += 1
+#     continue
+#   print(i, end=", ")
+#   i += 1
+
+# i=0
+# while i <= 1000:
+#   if i%2 == 0:
+#     i += 1
+#     continue
+#   if i >= 999:
+#     print(i, end="")
+#   else:
+#     print(i, end=", ")
+#   i += 1
+
+# a=[1,2,1,2,2,2,2,2,2]
+# val = 2
+# while val in a:
+#   a.remove(val)
+# print(a)
+
+# import time as tm
+# print(tm.time())
+# num =0
+# target_tick = tm.time()+5
+# while tm.time() < target_tick:
+#   num +=1
+# print(tm.time())
+# print("5초동안 {}번 반복".format(num))
+
+
+# #min() max() sum()
+# num = [1,2,3,4,5]
+# print(min(num)) #1
+# print(max(num)) #5
+# print(sum(num)) #15
+
+
+# # 배열뒤집어서 반복문
+# arr = reversed([1,2,3,4,5])
+# for i in arr:
+#   print("1첫번째 반복문: {}".format(i))
+# for i in arr:
+#   print("1두번째 반복문: {}".format(i)) #두번째 반복문 실행 안됨
+  
+# arr2 = [1,2,3,4,5]
+# for i in reversed(arr2):
+#   print("2첫번째 반복문: {}".format(i))
+# for i in reversed(arr2):
+#   print("2두번째 반복문: {}".format(i)) #반복할때 리버스해야 두번째 반복문도 실행됨  
+
+
+# # enumerate() 함수: enum(튜플)으로 형변환?
+# arr = ["사과", "배", "귤", "수박"]
+# for idx, val in enumerate(arr):
+#   print("index:{}, value:{}".format(idx, val)) # index:0, value:사과 ......
+# enumArr = list(enumerate(arr))  
+# print(enumArr[0], type(enumArr[0])) #(0, '사과') <class 'tuple'>
+# atuple = ("튜플1","튜플2","튜플3","튜플4")
+# print(atuple, type(atuple)) #('튜플1', '튜플2', '튜플3', '튜플4') <class 'tuple'>
+# print(atuple[0]) #튜플1
+# # atuple[0] = "변경!" #TypeError: 'tuple' object does not support item assignment   튜플은 읽기전용 못바꿈
+# btuple = ("비튜플")
+# print(btuple, type(btuple)) #비튜플 <class 'str'> 튜플 만들때 항목이 하나만 있으면 str됨
+# ctuple = ("시튜플",)
+# print(btuple, type(ctuple)) #비튜플 <class 'tuple'> 항목이 하나일땐 뒤쪽에 ,쉼표 넣어야 튜플로인식
+
+# # dictionary items()함수
+# dictA = {100:"100원", 200:"200원", 300:"300원"}
+# print(dictA.items()) #dict_items([(100, '100원'), (200, '200원'), (300, '300원')])
+# for key, val in dictA.items():
+#   print("key:{}, val:{}".format(key, val)) # key:100, val:100원......
+
+
+alist = [ i for i in range(10) if i%2 == 0 ] # i를 0~9까지 10번 반복하는데 i를 2로 나눴을때 0일때만 alist라는 배열에 추가
+print(alist)
+
+arr = ["사과", "배", "초콜릿", "귤", "파인애플"]
+output = [fruit for fruit in arr if fruit != "초콜릿"] # arr이라는 배열의 원소를 fruit라는 배열에 하나씩 넣으면서 반복하는데 fruit가 초콜릿이 아니면 output배열에 추가
+print(output) # ['사과', '배', '귤', '파인애플']add 
